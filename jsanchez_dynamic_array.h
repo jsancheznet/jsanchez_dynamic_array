@@ -1,3 +1,10 @@
+/*
+  TODO List
+
+  - Make the user setup defines so they can choose the function names so it better fits with their coding style.
+      - Example: rename ArrayInit to __jsanchez_Array_Init and make the user do #define ArrayInit __jsanchez_ArrayInit
+ */
+
 #pragma once
 
 // NOTE(Jorge): This only compiles in C
@@ -63,7 +70,6 @@
 // 6- Decrement Array Size by 1
 // 7- If ArraySize <= ArrayCapacity/3 realloc and copy
 // 8- If ArraySize <= 1/4 of ArrayCapacity, realloc to be ArraySize * 2 * sizeof(Type) + Raw
-// TODO(Jorge): Popping from an empty array should not crash!
 #define ArrayPop(ARRAY, OUT)                                        \
     do  {                                                           \
         assert(ARRAY);                                              \
@@ -71,9 +77,9 @@
         int *Raw = ((int*)(ARRAY) - 2);                             \
         if(Raw[0] == 0)                                             \
         {                                                           \
-            assert(0 && "Array Size is 0, cannot pop the array");   \
+            *(OUT) = NULL;                                          \
         }                                                           \
-        if(Raw[0] > 0)                                              \
+        else if(Raw[0] > 0)                                         \
         {                                                           \
             (*(OUT)) = ARRAY[Raw[0] - 1];                           \
             Raw[0] -= 1;                                            \

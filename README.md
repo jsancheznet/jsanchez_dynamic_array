@@ -15,7 +15,9 @@ my_struct *StructArray;
 // Init the array, this allocates size for the array metadata and sets the array size and capacity to 0
 ArrayInit(StructArray);
 
-// Push to the end of the array, the array grows dynamically and each time the capacity is reached it allocates the double of the space used and copies everything onto the new memory pool
+// Push to the end of the array, the array grows dynamically and each
+time the capacity is reached it allocates the double of the space used
+and copies everything onto the new memory pool
 my_struct Foo;
 ArrayPush(StructArray, Foo);
 
@@ -29,8 +31,7 @@ int Capacity = ArrayCapacity(StructArray);
 
 // Free the memory and metadata
 ArrayFree(StructArray);
-
-# How to run tests
+```
 
 # License
 
