@@ -7,9 +7,8 @@ Generic dynamic array implementation in C
 
 ```C
 #include "jsanchez_dynamic_array.h"
-```
 
-```C
+
 // Create a pointer with the desired array type
 my_struct *StructArray;
 
