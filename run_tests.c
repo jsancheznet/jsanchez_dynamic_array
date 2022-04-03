@@ -1,3 +1,9 @@
+/*
+  TODO List
+
+  - ArrayPop is currently failing, reimplement whole dynamic array? i
+    want to try implementation with minimal macro use.
+ */
 #include <assert.h>
 #include <stdio.h>
 
