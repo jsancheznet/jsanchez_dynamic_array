@@ -5,8 +5,9 @@ Generic dynamic array implementation in C
 
 # How to use
 
-- include jsanchez_dynamic_array.h in your project
-``` #include "jsanchez_dynamic_array.h" ```
+```C
+#include "jsanchez_dynamic_array.h"
+```
 
 ```C
 // Create a pointer with the desired array type
@@ -16,8 +17,8 @@ my_struct *StructArray;
 ArrayInit(StructArray);
 
 // Push to the end of the array, the array grows dynamically and each
-time the capacity is reached it allocates the double of the space used
-and copies everything onto the new memory pool
+// time the capacity is reached it allocates the double of the space used
+// and copies everything onto the new memory pool
 my_struct Foo;
 ArrayPush(StructArray, Foo);
 
