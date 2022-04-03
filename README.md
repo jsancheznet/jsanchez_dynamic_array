@@ -21,11 +21,15 @@ ArrayInit(StructArray);
 my_struct Foo;
 ArrayPush(StructArray, Foo);
 
-// Pops the last element of the array. The array also resized down when the size is 1/3 of the capacity and you pop one element.
+// Pops the last element of the array. The array also resized down
+// when the size is 1/3 of the capacity and you pop one element.
+
 my_struct *Foo;
 ArrayPop(StructArray, &Foo);
 
-// Get the current array size and capacity, ArrayCount is the same as ArraySize, i prefer ArrayCount but Size might be clearer
+// Get the current array size and capacity, ArrayCount is the same as
+// ArraySize, i prefer ArrayCount but Size might be clearer
+
 int Size = ArraySize(StructArray);
 int Capacity = ArrayCapacity(StructArray);
 
